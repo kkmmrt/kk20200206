@@ -74,4 +74,19 @@ public class MainActivity extends AppCompatActivity {
         lauk2.setText(ats);
     }
 
+    public void m6Click (View a){
+        //patikrinti ar skaičius lyginis
+        String eil1 = txt1.getText().toString();
+        int sk1 = Integer.parseInt(eil1);
+        int liekana = sk1 % 2;
+        String ats;
+        if (liekana == 0){
+            ats = "Skaičius lyginis";
+        }else{
+            ats = "Skaičius NElyginis";
+        }
+        lauk2.setText(ats);
+
+    }
+
 }
