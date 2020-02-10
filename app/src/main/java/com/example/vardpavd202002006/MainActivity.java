@@ -86,7 +86,28 @@ public class MainActivity extends AppCompatActivity {
             ats = "Skaičius NElyginis";
         }
         lauk2.setText(ats);
-
     }
+
+    public void m7Click (View view){
+        //pateikti analizę apie dviejų skaičių lygiškumą
+        String eil1 = txt1.getText().toString();
+        String eil2 = txt2.getText().toString();
+        int sk1 = Integer.parseInt(eil1);
+        int sk2 = Integer.parseInt(eil2);
+        int liekana1 = sk1 % 2;
+        int liekana2 = sk2 % 2;
+        String ats;
+        if((liekana1 == 0) && (liekana2 == 0)){
+            ats = "abu lyginiai";
+        }else if ((liekana1 != 0) && (liekana2 != 0)){
+            ats = "abu nelyginiai";
+        }else if(liekana1 ==0){
+            ats = "pirmas lyginis";
+        }else {
+            ats = "antras lyginis";
+        }
+        lauk2.setText(ats);
+    }
+
 
 }
