@@ -56,5 +56,22 @@ public class MainActivity extends AppCompatActivity {
         lauk2.setText("didesnis "+ats);
     }
 
+    public void m5Click (View a){
+        String eil1 = txt1.getText().toString();
+        String eil2 = txt2.getText().toString();
+        double sk1 = Double.parseDouble(eil1);
+        double sk2 = Double.parseDouble(eil2);
+        double didesnis, mazesnis;
+        if(sk1>sk2){
+            didesnis = sk1;
+            mazesnis = sk2;
+        }else{
+            didesnis = sk2;
+            mazesnis = sk1;
+        }
+        double rezultatas  = didesnis / mazesnis;
+        String ats = Double.toString(rezultatas);
+        lauk2.setText(ats);
+    }
 
 }
